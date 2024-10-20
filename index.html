@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вадим Салеев</title>
+    <link href="assets/output.css" rel="stylesheet"/>
+    <link href="assets/reset.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="slider/slider.css">
+
+</head>
+<body>
+<div id="app">
+    <header class="header">
+        <div class="header-img"></div>
+        <div class="header-logo">
+            <h1 class="header-logo__logo">
+                Вадим Салеев
+            </h1>
+            <p class="header-logo__des">
+                Праздник в ваш дом!
+            </p>
+        </div>
+    </header>
+    <main>
+        <div class="portfolio">
+            <div class="container">
+                <div class="portfolio__wrapper">
+                    <p class="portfolio__text">ПОРТФОЛИО</p>
+                    <div class="slider">
+                        <div class="slides">
+                            <div class="slide">
+                                <video src="assets/videos/video1.MP4" muted></video>
+                            </div>
+                            <div class="slide">
+                                <video src="assets/videos/video2.mp4" muted></video>
+                            </div>
+                            <div class="slide">
+                                <video src="assets/videos/video3.mp4" muted></video>
+                            </div>
+                        </div>
+                        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-cards">
+            <div class="video-cards__cards-column" data-index="1">
+                <div class=video-cards__card>
+                    <div class="video-wrapper">
+                        <video src="assets/videos/video4.mp4" autoplay="autoplay" playsinline muted loop></video>
+                    </div>
+                    <p class="desc">Заставим полюбить снова</p>
+                </div>
+                <div class=video-cards__card>
+                    <div class="video-wrapper">
+                        <video src="assets/videos/video5.mp4" autoplay="autoplay" playsinline muted loop></video>
+                    </div>
+                    <p class="desc">Проведем настоящее интервью</p>
+                </div>
+            </div>
+            <div class="video-cards__cards-column" data-index="2">
+                <div class=video-cards__card>
+                    <div class="video-wrapper">
+                        <video src="assets/videos/video6.mp4" autoplay="autoplay" playsinline muted loop></video>
+                    </div>
+                    <p class="desc">Подарим незабываемые эмоции</p>
+                </div>
+                <div class=video-cards__card>
+                    <div class="video-wrapper">
+                        <video src="assets/videos/video7.mp4" autoplay="autoplay" playsinline muted loop></video>
+                    </div>
+                    <p class="desc">Рассмешим даже самых угрюмых</p>
+                </div>
+            </div>
+        </div>
+        <div class="costs">
+            <div class="costs-list">
+                <h2 class="costs-list__header">ЦЕНЫ</h2>
+                <div class="costs-list__cost-cards-list">
+                    <div class="costs-list__cost-card">
+                        <div class="costs-list__cost-card__header">
+                            <p class="costs-list__cost-card__header-text">Пакет стандарт</p>
+                            <p class="costs-list__cost-card__header-cost">5000р</p>
+                        </div>
+                        <div class="costs-list__cost-card__desc">
+                            <p class="costs-list__cost-card__desc-item">1.Описани пакета по пунктам</p>
+                            <p class="costs-list__cost-card__desc-item">1.Описани пакета по пунктам</p>
+                            <p class="costs-list__cost-card__desc-item">1.Описани пакета по пунктам</p>
+                        </div>
+                    </div>
+                    <div class="costs-list__cost-card">
+                        <div class="costs-list__cost-card__header">
+                            <p class="costs-list__cost-card__header-text">Пакет стандарт</p>
+                            <p class="costs-list__cost-card__header-cost">5000р</p>
+                        </div>
+                        <div class="costs-list__cost-card__desc">
+                            <p class="costs-list__cost-card__desc-item">1.Описани пакета по пунктам</p>
+                            <p class="costs-list__cost-card__desc-item">1.Описани пакета по пунктам</p>
+                            <p class="costs-list__cost-card__desc-item">1.Описани пакета по пунктам</p>
+                        </div>
+                    </div>
+                    <div class="costs-list__cost-card">
+                        <div class="costs-list__cost-card__header">
+                            <p class="costs-list__cost-card__header-text">Пакет стандарт</p>
+                            <p class="costs-list__cost-card__header-cost">5000р</p>
+                        </div>
+                        <div class="costs-list__cost-card__desc">
+                            <p class="costs-list__cost-card__desc-item">1.Описани пакета по пунктам</p>
+                            <p class="costs-list__cost-card__desc-item">1.Описани пакета по пунктам</p>
+                            <p class="costs-list__cost-card__desc-item">1.Описани пакета по пунктам</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="costs-video">
+
+                <video src="assets/videos/video4.mp4" autoplay="autoplay" playsinline muted loop></video>
+            </div>
+        </div>
+
+        <div class="feedbacks-list">
+            <h2 class="feedbacks-list__header-text">ОТЗЫВЫ</h2>
+            <div class="feedbacks-list__list">
+                <div class="feedback">
+                    <h3 class="feedback__text">Просто великолепно</h3>
+                    <div class="feedback__user">
+                        <img class="feedback__user-avatar" alt="Аватар" src=""/>
+                        <p class="feedback__user-name">СВЕТЛАНА</p>
+                    </div>
+
+                </div>
+                <div class="feedback">
+                    <h3 class="feedback__text">Просто великолепно</h3>
+                    <div class="feedback__user">
+                        <img class="feedback__user-avatar" alt="Аватар" src="assets/imgs/IMAGE.png"/>
+                        <p class="feedback__user-name">АННА</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__logo-container">
+                <p class="footer__logo-container__logo">Вадим Савельев</p>
+                <p class="footer__logo-container__copyrights">© Sea-ls dev Fursenko Ivan</p>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts__socials">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+                <p class="footer__contacts__header">Контакты</p>
+                <p class="footer__contacts__contact">Email: qwerty@mail.ru</p>
+                <p class="footer__contacts__contact">Телефон: 8-888-888-88-88</p>
+            </div>
+        </div>
+    </footer>
+    <a href="https://t.me/Vadim_saleev" class="telegram-button" target="_blank">Написать нам</a>
+</div>
+<script src="slider/slider.js" defer></script>
+<script>
+    window.onscroll = function() {
+        const button = document.querySelector('.telegram-button');
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            button.style.display = "block"; // Показываем кнопку
+        } else {
+            button.style.display = "none"; // Скрываем кнопку
+        }
+    };
+</script>
+</body>
+</html>

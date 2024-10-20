@@ -1,0 +1,16 @@
+{
+  "name": "prazdniki",
+  "version": "1.0.0",
+  "description": "\"# prazdniki\"",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifursenko/prazdniki.git"
+  },
+  "author": "fursenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ifursenko/prazdniki/issues"
+  },
+  "homepage": "https://github.com/ifursenko/prazdniki#readme"
+}

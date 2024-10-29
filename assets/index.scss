@@ -1,5 +1,8 @@
 $primary-color: #81D8D0;
 $secondary-color: black;
+$grey-color:  #1C1C1C;
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 @font-face {
   src: url("fonts/Antikvarika.ttf");
@@ -36,7 +39,7 @@ body {
 .header-img {
   width: 60%;
   height: 100vh;
-  background: url("imgs/header.png") no-repeat;
+  background: url("imgs/header.JPG") no-repeat center;
   background-size: cover;
 }
 
@@ -44,21 +47,55 @@ body {
   width: 40%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 40px 0;
+  justify-content: space-between;
+  padding: 5em 0;
   &__logo {
-    text-align: center;
-    font-size: 64px;
     font-family: Bukhari, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    display: block;
+    position: absolute;
     color: $primary-color;
-    -webkit-text-stroke: 2px white; /* Толщина и цвет обводки */
+    letter-spacing: -.005em;
+
+    &::before, &::after {
+      content: attr(data-text);
+      display: block;
+      position: relative;
+      padding: 0 .1em;
+      z-index: 1;
+    }
+
+    &::before {
+      position: absolute;
+      -webkit-text-stroke: .1em black !important;
+      z-index: 0;
+    }
+
+    &:first-child {
+      transform: translate(-.255em, -.25em);
+    }
+
+    &:last-child {
+      transform: translate(.255em, .25em);
+    }
+  }
+  &__wrapper {
+    font-size: 64px;
+
+    height: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: screen;
+    position: relative;
   }
   &__des {
     text-align: center;
     font-size: 40px;
     font-family: Montserrat, sans-serif;
     color: $primary-color;
-    -webkit-text-stroke: 1px white; /* Толщина и цвет обводки */
   }
 }
 
@@ -326,19 +363,53 @@ a {
   }
   .header-logo {
     width: 100%;
-    background: url("imgs/header.png")  no-repeat ;
+    background: url("imgs/header.JPG")  no-repeat center;
     background-size: cover;
-    padding: 20px;
+    padding: 20px 0 5rem 0;
     &__logo {
-      font-size: 32px;
-      color: black;
-      -webkit-text-stroke: 2px $primary-color;
+      font-weight: 700;
+      font-style: italic;
+      display: block;
+      position: absolute;
+      color: $primary-color;
+      letter-spacing: -.005em;
 
+      &::before, &::after {
+        content: attr(data-text);
+        display: block;
+        position: relative;
+        padding: 0 .1em;
+        z-index: 1;
+      }
+
+      &::before {
+        position: absolute;
+        -webkit-text-stroke: .1em black !important;
+        z-index: 0;
+      }
+
+      &:first-child {
+        transform: translate(-.255em, -.25em);
+      }
+
+      &:last-child {
+        transform: translate(.255em, .25em);
+      }
+    }
+    &__wrapper {
+      font-size: 20vmin;
+      height: 2em;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      mix-blend-mode: screen;
+      position: relative;
     }
     &__des {
-      font-size: 25px;
-      color: black;
-      -webkit-text-stroke: 1px $primary-color;
+      font-size: 32px;
+      color: white;
+      -webkit-text-stroke: 1px $grey-color;
     }
   }
   .portfolio {
@@ -438,12 +509,48 @@ a {
   }
   .header-logo {
     width: 100%;
-    background: url("imgs/header.png")  no-repeat ;
+    background: url("imgs/header.JPG")  no-repeat center;
     background-size: cover;
     padding: 20px;
     &__logo {
-      color: black;
-      -webkit-text-stroke: 2px $primary-color; /* Толщина и цвет обводки */
+      font-weight: 700;
+      font-style: italic;
+      display: block;
+      position: absolute;
+      color: $primary-color;
+      letter-spacing: -.005em;
+
+      &::before, &::after {
+        content: attr(data-text);
+        display: block;
+        position: relative;
+        padding: 0 .1em;
+        z-index: 1;
+      }
+
+      &::before {
+        position: absolute;
+        -webkit-text-stroke: .1em black !important;
+        z-index: 0;
+      }
+
+      &:first-child {
+        transform: translate(-.255em, -.25em);
+      }
+
+      &:last-child {
+        transform: translate(.255em, .25em);
+      }
+    }
+    &__wrapper {
+      font-size: 20vmin;
+      height: 2em;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      mix-blend-mode: screen;
+      position: relative;
     }
     &__des {
       color: black;

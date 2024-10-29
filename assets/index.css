@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @font-face {
   src: url("fonts/Antikvarika.ttf");
   font-family: "Bukhari";
@@ -38,7 +39,7 @@ body {
 .header-img {
   width: 60%;
   height: 100vh;
-  background: url("imgs/header.png") no-repeat;
+  background: url("imgs/header.JPG") no-repeat center;
   background-size: cover;
 }
 
@@ -46,22 +47,51 @@ body {
   width: 40%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 40px 0;
+  justify-content: space-between;
+  padding: 5em 0;
 }
 .header-logo__logo {
-  text-align: center;
-  font-size: 64px;
   font-family: Bukhari, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  display: block;
+  position: absolute;
   color: #81D8D0;
-  -webkit-text-stroke: 2px white; /* Толщина и цвет обводки */
+  letter-spacing: -0.005em;
+}
+.header-logo__logo::before, .header-logo__logo::after {
+  content: attr(data-text);
+  display: block;
+  position: relative;
+  padding: 0 0.1em;
+  z-index: 1;
+}
+.header-logo__logo::before {
+  position: absolute;
+  -webkit-text-stroke: 0.1em black !important;
+  z-index: 0;
+}
+.header-logo__logo:first-child {
+  transform: translate(-0.255em, -0.25em);
+}
+.header-logo__logo:last-child {
+  transform: translate(0.255em, 0.25em);
+}
+.header-logo__wrapper {
+  font-size: 64px;
+  height: 2em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: screen;
+  position: relative;
 }
 .header-logo__des {
   text-align: center;
   font-size: 40px;
   font-family: Montserrat, sans-serif;
   color: #81D8D0;
-  -webkit-text-stroke: 1px white; /* Толщина и цвет обводки */
 }
 
 .portfolio {
@@ -326,19 +356,50 @@ a {
   }
   .header-logo {
     width: 100%;
-    background: url("imgs/header.png") no-repeat;
+    background: url("imgs/header.JPG") no-repeat center;
     background-size: cover;
-    padding: 20px;
+    padding: 20px 0 5rem 0;
   }
   .header-logo__logo {
-    font-size: 32px;
-    color: black;
-    -webkit-text-stroke: 2px #81D8D0;
+    font-weight: 700;
+    font-style: italic;
+    display: block;
+    position: absolute;
+    color: #81D8D0;
+    letter-spacing: -0.005em;
+  }
+  .header-logo__logo::before, .header-logo__logo::after {
+    content: attr(data-text);
+    display: block;
+    position: relative;
+    padding: 0 0.1em;
+    z-index: 1;
+  }
+  .header-logo__logo::before {
+    position: absolute;
+    -webkit-text-stroke: 0.1em black !important;
+    z-index: 0;
+  }
+  .header-logo__logo:first-child {
+    transform: translate(-0.255em, -0.25em);
+  }
+  .header-logo__logo:last-child {
+    transform: translate(0.255em, 0.25em);
+  }
+  .header-logo__wrapper {
+    font-size: 20vmin;
+    height: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: screen;
+    position: relative;
   }
   .header-logo__des {
-    font-size: 25px;
-    color: black;
-    -webkit-text-stroke: 1px #81D8D0;
+    font-size: 32px;
+    color: white;
+    -webkit-text-stroke: 1px #1C1C1C;
   }
   .portfolio {
     min-height: 800px;
@@ -433,13 +494,45 @@ a {
   }
   .header-logo {
     width: 100%;
-    background: url("imgs/header.png") no-repeat;
+    background: url("imgs/header.JPG") no-repeat center;
     background-size: cover;
     padding: 20px;
   }
   .header-logo__logo {
-    color: black;
-    -webkit-text-stroke: 2px #81D8D0; /* Толщина и цвет обводки */
+    font-weight: 700;
+    font-style: italic;
+    display: block;
+    position: absolute;
+    color: #81D8D0;
+    letter-spacing: -0.005em;
+  }
+  .header-logo__logo::before, .header-logo__logo::after {
+    content: attr(data-text);
+    display: block;
+    position: relative;
+    padding: 0 0.1em;
+    z-index: 1;
+  }
+  .header-logo__logo::before {
+    position: absolute;
+    -webkit-text-stroke: 0.1em black !important;
+    z-index: 0;
+  }
+  .header-logo__logo:first-child {
+    transform: translate(-0.255em, -0.25em);
+  }
+  .header-logo__logo:last-child {
+    transform: translate(0.255em, 0.25em);
+  }
+  .header-logo__wrapper {
+    font-size: 20vmin;
+    height: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: screen;
+    position: relative;
   }
   .header-logo__des {
     color: black;

@@ -51,12 +51,14 @@ body {
     font-size: 64px;
     font-family: Bukhari, sans-serif;
     color: $primary-color;
+    -webkit-text-stroke: 2px white; /* Толщина и цвет обводки */
   }
   &__des {
     text-align: center;
     font-size: 40px;
     font-family: Montserrat, sans-serif;
     color: $primary-color;
+    -webkit-text-stroke: 1px white; /* Толщина и цвет обводки */
   }
 }
 
@@ -330,10 +332,13 @@ a {
     &__logo {
       font-size: 32px;
       color: black;
+      -webkit-text-stroke: 2px $primary-color;
+
     }
     &__des {
       font-size: 25px;
       color: black;
+      -webkit-text-stroke: 1px $primary-color;
     }
   }
   .portfolio {
@@ -438,9 +443,11 @@ a {
     padding: 20px;
     &__logo {
       color: black;
+      -webkit-text-stroke: 2px $primary-color; /* Толщина и цвет обводки */
     }
     &__des {
       color: black;
+      -webkit-text-stroke: 1px $primary-color;
     }
   }
   .costs-video {
@@ -517,6 +524,40 @@ a {
 
 @media (min-width: 1201px){
 
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 

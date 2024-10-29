@@ -54,12 +54,14 @@ body {
   font-size: 64px;
   font-family: Bukhari, sans-serif;
   color: #81D8D0;
+  -webkit-text-stroke: 2px white; /* Толщина и цвет обводки */
 }
 .header-logo__des {
   text-align: center;
   font-size: 40px;
   font-family: Montserrat, sans-serif;
   color: #81D8D0;
+  -webkit-text-stroke: 1px white; /* Толщина и цвет обводки */
 }
 
 .portfolio {
@@ -331,10 +333,12 @@ a {
   .header-logo__logo {
     font-size: 32px;
     color: black;
+    -webkit-text-stroke: 2px #81D8D0;
   }
   .header-logo__des {
     font-size: 25px;
     color: black;
+    -webkit-text-stroke: 1px #81D8D0;
   }
   .portfolio {
     min-height: 800px;
@@ -435,9 +439,11 @@ a {
   }
   .header-logo__logo {
     color: black;
+    -webkit-text-stroke: 2px #81D8D0; /* Толщина и цвет обводки */
   }
   .header-logo__des {
     color: black;
+    -webkit-text-stroke: 1px #81D8D0;
   }
   .costs-video {
     display: none;
@@ -501,6 +507,38 @@ a {
   .footer {
     padding: 20px 4rem;
   }
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /*# sourceMappingURL=output.css.map */

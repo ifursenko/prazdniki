@@ -14,6 +14,11 @@ $grey-color:  #1C1C1C;
   font-family: 'Montserrat';
 }
 
+@font-face {
+  src: url("fonts/Vollda-Bold.otf");
+  font-family: 'Vollda-Bold';
+}
+
 *::-webkit-scrollbar { display: none; }
 * { scrollbar-width: none; }
 * { -ms-overflow-style: none; }
@@ -161,34 +166,35 @@ body {
   }
 }
 
-.costs {
-  height: auto;
-  display: flex;
-}
 
-.costs-video {
-  width: 50vw;
-  height: auto;
-  overflow: hidden;
-  position: relative;
-  > video {
-    position:absolute;
-  }
-}
 
 .costs-list {
-  width: 50%;
-  height: 100%;
+  position: relative;
+  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: url("videos/video2.mp4") ;
+  width: 100%;
+  overflow: hidden;
+  > video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    z-index: -5;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+  }
   &__header {
     font-family: Bukhari, sans-serif;
     font-size: 32px;
     text-align: center;
     margin: 0 auto;
     padding: 20px 0;
+    color: $primary-color;
   }
   &__cost-cards-list {
     margin: 0 auto;
@@ -267,14 +273,14 @@ body {
       width: 80px;
     }
     &-name {
-      font-family: Montserrat, sans-serif;
+      font-family: Vollda-Bold, sans-serif;
       font-size: 16px;
       color: $primary-color;
       margin: 0 auto;
     }
   }
   &__text {
-    font-family: Montserrat, sans-serif;
+    font-family: Vollda-Bold, sans-serif;
     font-size: 14px;
     color: $primary-color;
     margin: 0 auto;
@@ -287,6 +293,7 @@ body {
 .footer {
   height: 500px;
   padding: 40px 15rem;
+  z-index: 100;
   &__wrapper {
     height: 100%;
     display: flex;
@@ -409,7 +416,6 @@ a {
     &__des {
       font-size: 32px;
       color: white;
-      -webkit-text-stroke: 1px $grey-color;
     }
   }
   .portfolio {

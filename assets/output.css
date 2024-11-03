@@ -8,6 +8,10 @@
   src: url("fonts/Trafit.ttf");
   font-family: "Montserrat";
 }
+@font-face {
+  src: url("fonts/Vollda-Bold.otf");
+  font-family: "Vollda-Bold";
+}
 *::-webkit-scrollbar {
   display: none;
 }
@@ -157,28 +161,26 @@ body {
   justify-content: center;
 }
 
-.costs {
-  height: auto;
-  display: flex;
-}
-
-.costs-video {
-  width: 50vw;
-  height: auto;
-  overflow: hidden;
-  position: relative;
-}
-.costs-video > video {
-  position: absolute;
-}
-
 .costs-list {
-  width: 50%;
-  height: 100%;
+  position: relative;
+  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: url("videos/video2.mp4");
+  width: 100%;
+  overflow: hidden;
+}
+.costs-list > video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  z-index: -5;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
 }
 .costs-list__header {
   font-family: Bukhari, sans-serif;
@@ -186,6 +188,7 @@ body {
   text-align: center;
   margin: 0 auto;
   padding: 20px 0;
+  color: #81D8D0;
 }
 .costs-list__cost-cards-list {
   margin: 0 auto;
@@ -263,13 +266,13 @@ body {
   width: 80px;
 }
 .feedback__user-name {
-  font-family: Montserrat, sans-serif;
+  font-family: Vollda-Bold, sans-serif;
   font-size: 16px;
   color: #81D8D0;
   margin: 0 auto;
 }
 .feedback__text {
-  font-family: Montserrat, sans-serif;
+  font-family: Vollda-Bold, sans-serif;
   font-size: 14px;
   color: #81D8D0;
   margin: 0 auto;
@@ -280,6 +283,7 @@ body {
 .footer {
   height: 500px;
   padding: 40px 15rem;
+  z-index: 100;
 }
 .footer__wrapper {
   height: 100%;
@@ -399,7 +403,6 @@ a {
   .header-logo__des {
     font-size: 32px;
     color: white;
-    -webkit-text-stroke: 1px #1C1C1C;
   }
   .portfolio {
     min-height: 800px;
